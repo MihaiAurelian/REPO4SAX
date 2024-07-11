@@ -9,7 +9,10 @@ body {
     font-family: Arial, sans-serif;
     color: #fff;
     background-color: rgb(175, 20, 162); /* Pink background */
-    min-height: 100vh;
+    background-image: url('/images/SDBM.jpeg');
+    background-size: cover;
+    min-height: 400px;
+    
     display: flex;
     flex-direction: column;
 }
@@ -55,14 +58,14 @@ footer {
     padding: 20px 0;
     text-align: center;
     position: relative;
-    border-top: 3px solid #ffa500; /* Orange top border */
-    box-shadow: 0 -10px 10px -5px #ffa500; /* Orange shadow at the top */
+    border-top: 3px solid  rgb(7, 145, 26); /* Orange top border */
+    box-shadow: 0 -10px 10px -5px  rgb(7, 145, 26); /* Orange shadow at the top */
     margin-top: auto;
 }
 
 footer p {
     margin-top: 10px;
-    color: #ffeb3b; /* Yellow */
+    color:  rgb(7, 145, 26); /* Green */
 }
 
 .social-icon {

@@ -1,20 +1,98 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello MainController!{% endblock %}
+{% block title %}SDBM SAXOFONY - Reception{% endblock %}
 
 {% block body %}
+<!-- Intégration de Bootstrap 5 -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Intégration des animations de Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+<!-- Custom CSS for additional styling -->
 <style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    .jumbotron {
+        position: relative;
+        overflow: hidden;
+        transition-delay: 5s;
+        background-image: url('/images/saxophony13.png');
+        background-size: cover;
+        color: white;
+        text-shadow: 2px 2px 4px #000;
+        min-height: 768px;
+        padding: 5em inherit;
+    }
+    .jumbotron .container {
+        position: relative;
+        z-index: 1;
+        }
+    .card {
+        transition-delay: 5s;
+        transition: transform 0.3s ease-in-out;
+    }
+    .card:hover {
+        transition-delay: 5s;
+        transform: scale(1.05);
+    }
+
+    #video-background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: 1;
+        width: 100%;
+    }
 </style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+<div class="container mt-5">
+    <div class="jumbotron text-center py-5 animate__animated animate__fadeIn">
+        <h1 class="display-4">Mr. SAXONIMOUS presents SAXOFONY !</h1>
+        <p class="lead mt-3">Ce projet a pour objectif de créer une base de données initiale, de la synchroniser avec une base de données déjà existante, et de gérer les enregistrements en utilisant des fonctionnalités de création, lecture, mise à jour et suppression (CRUD).</p>
+    </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/xampp/htdocs/PROJECTS/Sym/Fony/Saxofony/sdbm_sf/src/Controller/MainController.php</code></li>
-        <li>Your template at <code>C:/xampp/htdocs/PROJECTS/Sym/Fony/Saxofony/sdbm_sf/templates/main/index.html.twig</code></li>
-    </ul>
+    <div class="embed-responsive embed-responsive-16by9">
+        <video class="embed-responsive-item" controls>
+            <source src="{{ asset('assets/img/Alexandra Stan - Mr. Saxobeat (Official Video).mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="row mt-5 text-center">
+        <div class="col-md-4 animate__animated animate__zoomIn animate__delay-1s">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Ajouter des données</h5>
+                    <p class="card-text">Commencez à insérer de nouvelles données dans votre base de données.</p>
+                    <a href="#" class="btn btn-primary">Ajouter</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 animate__animated animate__zoomIn animate__delay-2s">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Modifier des données</h5>
+                    <p class="card-text">Mettez à jour ou modifiez les enregistrements existants dans votre base de données.</p>
+                    <a href="#" class="btn btn-warning">Modifier</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 animate__animated animate__zoomIn animate__delay-3s">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Supprimer des données</h5>
+                    <p class="card-text">Supprimez les enregistrements inutiles de votre base de données.</p>
+                    <a href="#" class="btn btn-danger">Supprimer</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==" crossorigin="anonymous"></script>
+
 {% endblock %}
